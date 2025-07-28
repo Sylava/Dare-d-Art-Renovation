@@ -37,9 +37,9 @@ export default function RootLayout({
       >
         <header>
           <div className="logo-container">
-            <a href="/">
+            <Link href="/">
               <img src="./images/Logo.jpg" alt="Logo" />
-            </a>
+            </Link>
           </div>
           <nav>
             <ul>
