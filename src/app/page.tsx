@@ -1,4 +1,4 @@
-
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -45,7 +45,7 @@ export default function Home() {
           <div className="contact-container cols-span-1">
             <div className="contact">
               <p>Une question ? Un devis ?</p>
-              <a href="/contact">CONTACTEZ-NOUS</a>
+              <Link href="/contact">CONTACTEZ-NOUS</Link>
             </div>
           </div>
           <div className="prestations-img-container col-span-2">
@@ -89,7 +89,7 @@ export default function Home() {
         <footer>
           <div className="footer-contact">
             <h2>A  chaque projet sa solution !</h2>
-            <a href="/contact">CONTACTEZ-NOUS !</a>
+            <Link href="/contact">CONTACTEZ-NOUS !</Link>
           </div>
           <div className="footer-info">
           </div>

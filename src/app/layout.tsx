@@ -2,17 +2,18 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Liens from "./components/liens";
+import Link from 'next/link';
 // import React from 'react';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: "Dare-d'Art Renovation",
@@ -42,11 +43,11 @@ export default function RootLayout({
           </div>
           <nav>
             <ul>
-              <li><a className="accueil-btn" href="/">ACCUEIL</a></li>
+              <li><Link className="accueil-btn" href="/">ACCUEIL</Link></li>
               <Liens lien="/prestations" name="PRESTATIONS"/>
               <Liens lien="/galerie" name="GALERIE"/>
               <Liens lien="/contact" name="CONTACT"/>
-              <a href="/devis"><li className="devis-btn">DEMANDE DE DEVIS</li></a>
+              <Link href="/devis"><li className="devis-btn">DEMANDE DE DEVIS</li></Link>
             </ul>
           </nav>
         </header>

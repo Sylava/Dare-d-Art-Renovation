@@ -1,4 +1,4 @@
-// import React from 'react';
+import Link from 'next/link';
 
 type LiensProps = {
   lien: string;
@@ -8,7 +8,7 @@ type LiensProps = {
 const Liens: React.FC<LiensProps> = ({ lien, name }) => {
   return (
     <li>
-      <a href={lien}>{name}</a>
+      <Link href={lien}>{name}</Link>
     </li>
   );
 };
