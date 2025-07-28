@@ -106,10 +106,61 @@ main{
   align-items: center;
 }
 
-.bedroom-img{
-  width: 100%;
-  height: auto;
+/* ___________________ CARROUSEL ___________________ */
+
+.carrousel {
+  position: relative;
+  width: 100vw;
+  height: 600px;
+  overflow: hidden;
 }
+
+.carrousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.carrousel-slide {
+  display: flex;
+  height: 100%;
+  transition: transform 1.5s ease-in-out;
+}
+
+.carrousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.carrousel-indicators {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.carrousel-indicator {
+  width: 11px;
+  height: 11px;
+  margin: 0 5px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.carrousel-indicator.active {
+  background-color: #333;
+}
+
+
+
+
+
+
 
 .presentation-grid{
   padding: 160px 5vw;

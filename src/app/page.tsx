@@ -1,10 +1,17 @@
 import Link from 'next/link';
+import Carrousel from './components/carrousel';
 
 export default function Home() {
+  const images = [
+    './images/image1.jpg',
+    './images/image2.jpg',
+    './images/image3.jpg',
+  ];
   return (
     <>
       <main>
-        <img className="bedroom-img" src="./images/bedroom.jpg" alt="bedroom" />
+        <Carrousel images={images} />
+        {/* <img className="bedroom-img" src="./images/bedroom.jpg" alt="bedroom" /> */}
         <article className="presentation-grid grid grid-cols-3">
           <div className="presentation-title grid-cols-1">
             <h2>QUI SOMMES-NOUS ?</h2>
