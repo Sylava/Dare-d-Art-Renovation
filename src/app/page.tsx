@@ -31,15 +31,15 @@ export default function Home() {
           <div className="prestations-img-container col-span-2">
             <div className="prestations-img">
               <img src="./images/plomberie.jpeg" alt="plomberie" />
-              <p>Plomberie</p>
+              <Link href="/plomberie">Plomberie</Link>
             </div>
             <div className="prestations-img">
               <img src="./images/peinture.png" alt="peinture" />
-              <p>Peinture</p>
+              <Link href="/peinture">Peinture</Link>
             </div>
             <div className="prestations-img">
               <img src="./images/electricite.png" alt="electricite" />
-              <p>Electricité</p>
+              <Link href="/electricite">Electricité</Link>
             </div>
           </div>
           <div className="contact-container cols-span-1">
@@ -51,15 +51,15 @@ export default function Home() {
           <div className="prestations-img-container col-span-2">
             <div className="prestations-img">
               <img src="./images/revetement.jpeg" alt="revetement" />
-              <p>Revêtement mural et sol</p>
+              <Link href="/revetement">Revêtement mural et sol</Link>
             </div>
             <div className="prestations-img">
               <img src="./images/ravalement.jpg" alt="ravalement" />
-              <p>Ravalement</p>
+              <Link href="/ravalement">Ravalement</Link>
             </div>
             <div className="prestations-img">
               <img src="./images/maconnerie.png" alt="maçonnerie" />
-              <p>Maçonnerie</p>
+              <Link href="/maconnerie">Maçonnerie</Link>
             </div>
           </div>
         </article>
@@ -86,14 +86,10 @@ export default function Home() {
             <p>Assurances décennales garantissant votre chantier.</p>
           </div>
         </article>
-        <footer>
-          <div className="footer-contact">
-            <h2>A  chaque projet sa solution !</h2>
-            <Link href="/contact">CONTACTEZ-NOUS !</Link>
-          </div>
-          <div className="footer-info">
-          </div>
-        </footer>
+        <div className="footer-contact">
+          <h2>A  chaque projet sa solution !</h2>
+          <Link href="/contact">CONTACTEZ-NOUS !</Link>
+        </div>
       </main>
     </>
   );

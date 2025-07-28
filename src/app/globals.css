@@ -45,17 +45,47 @@ nav{
 }
 
 ul{
+  font-weight: bold;
+  font-family: "Tahoma", sans-serif;
+  color: var(--color-primary);
+  font-size: var(--text-h4);
+}
+
+.menu{
   height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  font-weight: bold;
-  font-family: "Tahoma", sans-serif;
-  color: var(--color-primary);
-  font-size: var(--text-h4);
   padding-top: 20px;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  min-width: 160px;
+}
+
+.dropdown-menu li {
+  color: var(--color-primary);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f1f1f1;
+}
+
 
 .accueil-btn{
   color: var(--color-secondary);
@@ -146,7 +176,7 @@ main{
   box-shadow: 0px 0px 5px black;
 }
 
-.prestations-img p{
+.prestations-img a{
   color: var(--color-white);
   font-size: var(--text-body);
   font-weight: bold;
@@ -222,6 +252,7 @@ footer{
 }
 
 .footer-contact{
+  width: 100%;
   background: linear-gradient(45deg, #12896F, #20E7BC);
   display: flex;
   flex-direction: column;
