@@ -36,7 +36,7 @@ header{
 }
 
 .logo-container{
-  margin-right: 100px;
+  margin-right: 4.5vw;
   flex-shrink: 0;
 }
 
@@ -64,7 +64,7 @@ ul{
 .devis-btn{
   background-color: var(--color-primary);
   color: var(--color-white);
-  padding: 3px 100px;
+  padding: 3px 4.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 2px black;
 }
@@ -82,7 +82,7 @@ main{
 }
 
 .presentation-grid{
-  padding: 160px 100px;
+  padding: 160px 5vw;
 }
 
 .presentation-title{
@@ -104,7 +104,7 @@ main{
 
 .prestations{
   background: linear-gradient(45deg, #22417A, #396ECD);
-  padding: 80px 100px;
+  padding: 80px 5vw;
   width: 100%;
 }
 
@@ -132,16 +132,16 @@ main{
 }
 
 .prestations-img{
-  width: 300px;
+  width: 15vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .prestations-img img{
-  max-height: 150px;
+  max-height: 7.5vw;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 18px;
   object-fit: cover;
   box-shadow: 0px 0px 5px black;
 }
@@ -259,8 +259,7 @@ footer{
 
 
 
-
-
+/* __________________________________  RESPONSIVE _____________________________ */
 
 
 
