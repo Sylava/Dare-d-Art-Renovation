@@ -162,11 +162,11 @@ main{
 
 
 
-.presentation-grid{
-  padding: 160px 5vw;
+.presentation{
+  padding: 100px 5vw;
 }
 
-.presentation-title{
+.presentation h2{
   color: var(--color-secondary);
   font-size: var(--text-h2);
   font-weight: bold;
@@ -189,7 +189,7 @@ main{
   width: 100%;
 }
 
-.prestations-title{
+.prestations h2{
   color: var(--color-white);
   font-size: var(--text-h2);
   font-weight: bold;
@@ -206,6 +206,7 @@ main{
 }
 
 .prestations-img-container{
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -269,12 +270,17 @@ main{
   background-color: var(--color-secondary);
 }
 
+.engagement-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0px;
+}
+
 .engagement-title{
   font-weight: bold;
   font-size: var(--text-h2);
   color: var(--color-secondary);
-  margin-top: 100px;
-  margin-bottom: 60px;
 }
 
 .vignette{
@@ -309,8 +315,7 @@ footer{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 400px;
-  margin-top: 50px;
+  padding: 50px 0px;
   border: 2px solid var(--color-primary2);
 }
 
@@ -322,9 +327,10 @@ footer{
 
 .footer-contact a{
   font-weight: bold;
-  font-size: var(--text-h2);
+  font-size: var(--text-h4);
   color: var(--color-white);
-  padding: 10px 55px;
+  margin-top: 30px;
+  padding: 8px 40px;
   border-radius: 10px;
   box-shadow: 0px 0px 3px black;
   background-color: var(--color-primary);
@@ -343,9 +349,40 @@ footer{
 
 /* __________________________________  RESPONSIVE _____________________________ */
 
+@media (max-width: 1200px) {
+  header{
+    justify-content: space-between;
+  }
+  .nav-menu{
+    display: none;
+  }
 
+  .menu-burger{
+    display: block;
+  }
+}
 
+@media (max-width: 850px) {
 
+  .presentation h2{
+    display: flex;
+    justify-content: center;
+  }
+
+  .presentation-text{
+    grid-column-start: 1;
+    text-align: center;
+  }
+
+  .vignette-container{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .footer-contact h2{
+    font-size: 70px;
+    text-align: center;
+  }
+}
 
 
 

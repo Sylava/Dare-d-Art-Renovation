@@ -29,7 +29,10 @@ export default function RootLayout({
               <img src="./images/Logo.jpg" alt="Logo" />
             </Link>
           </div>
-          <nav>
+          <div className="menu-burger hidden cursor-pointer">
+            <img src="./images/menu-burger.svg" alt="menu-burger" />
+          </div>
+          <nav className="nav-menu">
             <ul className="menu">
               <li><Link className="accueil-btn" href="/">ACCUEIL</Link></li>
               <MenuDeroulant />
