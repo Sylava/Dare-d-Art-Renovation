@@ -8,12 +8,15 @@
   --color-third: #35c99a;
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-gray: rgb(240, 240, 240);
 
   --text-h1: 55px;
   --text-h2: 36px;
   --text-h3: 30px;
   --text-h4: 25px;
+  --text-h5: 20px;
   --text-body: 24px;
+  --text-body2: 17px;
 }
 
 
@@ -23,6 +26,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html, body{
+  height:100%;
+}
+
+body{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 h1, h2, h3{
@@ -63,6 +82,10 @@ ul{
 .dropdown {
   position: relative;
   display: inline-block;
+}
+
+.menu-burger{
+  display: none;
 }
 
 .dropdown-menu {
@@ -317,6 +340,7 @@ footer{
   justify-content: center;
   padding: 50px 0px;
   border: 2px solid var(--color-primary2);
+  border-bottom: none;
 }
 
 .footer-contact h2{
@@ -340,7 +364,130 @@ footer{
   height: 120px;
   background-color: var(--color-primary);
   border: 2px solid var(--color-primary2);
-  border-top: none;
+}
+
+
+/* __________________________________  CONTACT _____________________________ */
+
+.contact-main{
+  background-color: var(--color-gray);
+}
+
+.contact-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 47%;
+}
+
+.contact-title{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: var(--text-h5);
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.contact-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.contact-infos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--text-body2);
+}
+
+.contact-infos p:first-of-type{
+  font-weight: bold;
+}
+
+.contact-infos img{
+  width: 50px;
+}
+
+.formulaire{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-gray);
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 30px;
+  width: 100%;
+  font-size: var(--text-body2);
+  background-color: white
+}
+
+.formulaire p:first-of-type{
+  color: var(--color-primary);
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.input-group{
+  position: relative;
+}
+
+.input{
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid var(--color-primary);
+  margin-bottom: 40px;
+  border-radius: 5px;
+}
+
+.placeholder{
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  font-size: 16px;
+  padding: 0px 5px;
+  color: black;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input:focus + .placeholder, .input:not(:placeholder-shown).input:not(:focus)~.placeholder{
+  top: -10px;
+  color: var(--color-primary);
+  background-color: white
+}
+
+#email{
+  height: 40px;
+  width: 50%;
+}
+
+#message{
+  height: 250px;
+  resize: none;
+}
+
+.submit-btn{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: bold;
+  cursor: pointer;
+  width: 40%;
+  align-self: center;
+}
+
+.submit-btn:hover{
+  background-color: var(--color-primary2);
+  box-shadow: 0px 0px 2px black;
 }
 
 
@@ -349,16 +496,53 @@ footer{
 
 /* __________________________________  RESPONSIVE _____________________________ */
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   header{
     justify-content: space-between;
   }
+  
   .nav-menu{
     display: none;
   }
 
   .menu-burger{
     display: block;
+  }
+
+  .dropdown {
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .dropdown-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdown-menu li {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .dropdown-menu li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .contact-container{
+    width: 80%;
   }
 }
 
@@ -382,7 +566,69 @@ footer{
     font-size: 70px;
     text-align: center;
   }
+
+  .contact-container{
+    width: 90%;
+  }
+
+  #email{
+    width: 100%;
+  }
+
+  .formulaire{
+    padding: 15px;
+  }
 }
+
+
+/* ============= MENU MOBILE ========== */
+
+.nav-menu {
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1250px) {
+  .nav-menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    transition: right 0.4s ease;
+    z-index: 100;
+  }
+
+  .nav-menu.open {
+    right: 0;
+    box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+    gap: 40px;
+    padding: 0;
+  }
+
+  .menu-burger {
+    display: block;
+    z-index: 1100;
+  }
+  
+
+
+
+  
+}
+
 
 
 
